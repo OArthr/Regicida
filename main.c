@@ -3,7 +3,7 @@
 #include <time.h>
 #include <stdbool.h>
 
-// Bibliotecas de Guido pq ele é besta
+// Bibliotecas de Guido pq ele Ã© besta
 #include <locale.h>
 #include <windows.h>
 #include <mmsystem.h>
@@ -65,20 +65,20 @@ int main()
     do{
         Sleep(500);
         //PlaySound("Sounds\\SFX\\blipSelect.wav", NULL, SND_FILENAME | SND_ASYNC);
-        printf("\t 1 - Jogar;\n");
+        printf("\t 1 - Play;\n");
         Sleep(200);
         //PlaySound("Sounds\\SFX\\blipSelect.wav", NULL, SND_FILENAME | SND_ASYNC);
-        printf("\t 2 - Regras;\n");
+        printf("\t 2 - Rules;\n");
         Sleep(200);
         //PlaySound("Sounds\\SFX\\blipSelect.wav", NULL, SND_FILENAME | SND_ASYNC);
-        printf("\t 3 - Créditos;\n");
+        printf("\t 3 - Credits;\n");
         Sleep(200);
-        printf("\t Escolha uma das opções: ");
+        printf("\t Choose one option: ");
         scanf("%d", &escolha);
 
         if (escolha == 1){
             paint(1);
-            printf("\n\tOpção Selecionada: Jogar\n\n");
+            printf("\n\tSelected option: Play\n\n");
             reset();
         }
         else if (escolha == 2){
@@ -86,7 +86,7 @@ int main()
 
             do{
             paint(1);
-            printf("\tDigite 0 para sair das regras e voltar para as opções: ");
+            printf("\tType 0 to go back to options: ");
             reset();
             scanf("%d", &voltar);
             }while (voltar != 0);
@@ -97,7 +97,7 @@ int main()
 
             do{
             paint(1);
-            printf("\tDigite 0 para sair dos créditos e voltar para as opções: ");
+            printf("\tType 0 to go back to options: ");
             reset();
             scanf("%d", &voltar);
             }while (voltar != 0);
@@ -105,7 +105,7 @@ int main()
         }
         else{
             paint(1);
-            printf("\tDIGITE UMA OPÇÃO VÁLIDA!\n\n");
+            printf("\tTYPE A VALID OPTION!\n\n");
             reset();
         }
         }while (escolha != 1);
@@ -116,30 +116,30 @@ int main()
 
     Sleep(500);
     //PlaySound("Sounds\\SFX\\blipSelect.wav", NULL, SND_FILENAME | SND_ASYNC);
-    printf("\t 1 - Unidos somos Fortes (WIP);\n");
+    printf("\t 1 - Together we're strong (WIP);\n");
     Sleep(200);
     //PlaySound("Sounds\\SFX\\blipSelect.wav", NULL, SND_FILENAME | SND_ASYNC);
-    printf("\t 2 - Dividir para Conquistar (WIP);\n");
+    printf("\t 2 - Divide to Conquer (WIP);\n");
     Sleep(200);
     //PlaySound("Sounds\\SFX\\blipSelect.wav", NULL, SND_FILENAME | SND_ASYNC);
-    printf("\t 3 - Concentração Central;\n");
+    printf("\t 3 - Central Concentration;\n");
     Sleep(200);
     //PlaySound("Sounds\\SFX\\blipSelect.wav", NULL, SND_FILENAME | SND_ASYNC);
-    printf("\t 4 - Controle da Fronteira;\n");
+    printf("\t 4 - Frontier Control;\n");
 
-    printf("\t Digite o modo de jogo: ");
+    printf("\t Type a game mode: ");
     while (!valid_gamemode) {
         fflush(stdin);
         scanf("%d", &opcao_modo);
         switch (opcao_modo) {
             case 1:
                 paint(1);
-                printf("\tDIGITE UMA OPÇÃO VÁLIDA! ");
+                printf("\tTYPE A VALID OPTION! ");
                 reset();
                 continue;
             case 2:
                 paint(1);
-                printf("\tDIGITE UMA OPÇÃO VÁLIDA! ");
+                printf("\tTYPE A VALID OPTION! ");
                 reset();
                 continue;
             case 3:
@@ -154,7 +154,7 @@ int main()
                 continue;
             default:
                 paint(1);
-                printf("\tDIGITE UMA OPÇÃO VÁLIDA! ");
+                printf("\tTYPE A VALID OPTION! ");
                 reset();
                 continue;
         }
@@ -170,12 +170,12 @@ int main()
     if (opcao_modo==3)
     {
         paint(1);
-        printf("\tModo Selecionado: Concentração Central\n");
+        printf("\tSelected mode: Central Concentration\n");
         reset();
     }else if (opcao_modo==4)
     {
         paint(1);
-        printf("\tModo Selecionado: Controle da Fronteira\n");
+        printf("\tSelected mode: Frontier Control\n");
         reset();
     }
 
@@ -183,16 +183,16 @@ int main()
 
     Sleep(500);
     //PlaySound("Sounds\\SFX\\blipSelect.wav", NULL, SND_FILENAME | SND_ASYNC);
-    printf("\t 1 - Fácil;\n");
+    printf("\t 1 - Easy;\n");
     Sleep(200);
     //PlaySound("Sounds\\SFX\\blipSelect.wav", NULL, SND_FILENAME | SND_ASYNC);
-    printf("\t 2 - Médio;\n");
+    printf("\t 2 - Medium;\n");
     Sleep(200);
     //PlaySound("Sounds\\SFX\\blipSelect.wav", NULL, SND_FILENAME | SND_ASYNC);
-    printf("\t 3 - Difícil;\n");
+    printf("\t 3 - Hard;\n");
     Sleep(200);
 
-    printf("\tSelecione a dificuldade: ");
+    printf("\tSelect a difficulty: ");
     while (true) {
         fflush(stdin);
         scanf("%d", &dificuldade);
@@ -200,18 +200,18 @@ int main()
             break;
         } else {
             paint(1);
-            printf("\tDIGITE UMA OPÇÃO VÁLIDA! ");
+            printf("\tTYPE A VALID OPTION! ");
             reset();
         }
     }
 
     paint(1);
     if (dificuldade==1) {
-        printf("\n\tDificuldade Selecionada: Fácil\n");
+        printf("\n\tSelected difficulty: Easy\n");
     } else if (dificuldade==2) {
-        printf("\n\tDificuldade Selecionada: Médio\n");
+        printf("\n\tSelected difficulty: Medium\n");
     } else {
-        printf("\n\tDificuldade Selecionada: Difícil\n");
+        printf("\n\tSelected difficulty: Hard\n");
     }
     reset();
 
@@ -244,13 +244,13 @@ int main()
 
             imprime_N_das_cores(casasarr, casasrev, cortranc, valor_pulado);
 
-            printf("\n\tDigite o número correspondente à\n\tcasa a ser revelada: ");
+            printf("\n\tType the value of the house\n\tyou want to reveal: ");
             scanf("%d", &n);
 
             if (n<0||n>6||n==valor_pulado)
             {
                 paint(1);
-                printf("\t    Digite uma casa válida!\n");
+                printf("\t    TYPE A VALID NUMBER!\n");
                 reset();
             }
 
@@ -261,7 +261,7 @@ int main()
                     if (casasrev[j] && n==j)
                     {
                         paint(1);
-                        printf("\t    Digite uma casa nova!\n");
+                        printf("\t    TYPE A NEW NUMBER!\n");
                         reset();
                         rep = true;
                     }
@@ -287,7 +287,7 @@ int main()
     //mciSendString("stop REQUIEM", NULL, 0, NULL);
 
     // LEVEL GENERATION TEXT
-    printf("\t\tGerando nível.");
+    printf("\t\tGenerating level.");
     Sleep(800);
     printf(".");
     Sleep(500);
@@ -296,7 +296,7 @@ int main()
     // END OF THIS
     paint(1);
     //PlaySound("Sounds\\SFX\\changeRound.wav", NULL, SND_FILENAME | SND_ASYNC);
-    printf("\t\t\t   FASE DE EXPANSÃO\n\n\n");
+    printf("\t\t\t   EXPANSION PHASE\n\n\n");
     reset();
     Sleep(500);
 
@@ -304,7 +304,7 @@ int main()
     //mciSendString("play REQUIEM", NULL, 0, NULL);
     //PlaySound("Sounds\\OST\\The_Puppeteers_Tale.wav", NULL, SND_FILENAME | SND_ASYNC | SND_LOOP);
     exibeTabuleiro(bigarr, casas6x6, H, h, W, w, 1);
-    printf("\n\tPróxima peça: ");
+    printf("\n\tNext piece: ");
     paint(colorarr[1]);
     printf("#\n");
     reset();
@@ -315,7 +315,7 @@ int main()
         // COORDINATE INPUT AREA
         do
         {
-            printf("\tDigite a coordenada: ");
+            printf("\tType a coordinate: ");
             fflush(stdin);
             fgets(posicaostr, 3, stdin);
 
@@ -329,11 +329,11 @@ int main()
             //fim do importante
             if ((y>11||y<1)||(x<1||x>11)) {
                 paint(1);
-                printf("\tDIGITE UMA COORDENADA VÁLIDA!\n\n");
+                printf("\tTYPE A VALID COORDINATE!\n\n");
                 reset();
             } else if (invalid) {
                 paint(1);
-                printf("\tCOORDENADAS INVÁLIDAS!\n\n");
+                printf("\tTYPE A VALID COORDINATE!\n\n");
                 reset();
             }
 
@@ -368,7 +368,7 @@ int main()
         exibeTabuleiro(bigarr, casas6x6, H, h, W, w, 1);
 
         if (n!=35) {
-            printf("\n\tPróxima peça: ");
+            printf("\n\tNext piece: ");
             paint(colorarr[n+1]);
             printf("#\n");
             reset();
@@ -378,7 +378,7 @@ int main()
 //*/
     // END OF INPUT
     paint(1);
-    printf("\n\n\t\t\tPONTUAÇÕES DAS CASAS:\n");
+    printf("\n\n\t\t\tVALUES PER HOUSE:\n");
     reset();
 
     for (int i=0;i<7;i++)
@@ -400,18 +400,18 @@ int main()
         k++;
         l=0;
     }
-    // Validação da matriz pequena
+    // ValidaÃ§Ã£o da matriz pequena
 
-    // Fim da validação
+    // Fim da validaÃ§Ã£o
     //PlaySound(NULL, NULL, NULL);
     paint(1);
-    printf("\n\t\t\t   FASE DE INTRIGA\n");
+    printf("\n\t\t\t   PHASE OF INTRIGUE\n");
     reset();
     for (int i=0; i<6; i++)
     {
         Sleep(500);
         paint(1);
-        printf("\n\t\t\t%d INTRIGAS RESTANTES\n", 6-i);
+        printf("\n\t\t\t%d REMAINING MOVES\n", 6-i);
         reset();
 
         if (pontosCorretos(casas6x6, casasarr, modo, valor_pulado))
@@ -437,8 +437,8 @@ int main()
         {
             do
             {
-                printf("\t\t    Digite 00 se quer desistir: \n");
-                printf("\t\t    Casa 1 >- ");
+                printf("\t\t    Type 00 to give up: \n");
+                printf("\t\t    1st piece >- ");
                 fflush(stdin);
                 fgets(posicao_pequeno, 3, stdin);
 
@@ -454,7 +454,7 @@ int main()
                 }else if (x1_peq>5||x1_peq<0||y1_peq>5||y1_peq<0)
                 {
                     paint(1);
-                    printf("\t\t    DIGITE UMA COORDENADA VÁLIDA!\n");
+                    printf("\t\t    TYPE A VALID COORDINATE!\n");
                     reset();
                 }
 
@@ -462,7 +462,7 @@ int main()
 
             do
             {
-                printf("\t\t    Casa 2 >- ");
+                printf("\t\t    2nd piece >- ");
                 fflush(stdin);
                 fgets(posicao_pequeno, 3, stdin);
 
@@ -478,7 +478,7 @@ int main()
                 }else if (x2_peq>5||x2_peq<0||y2_peq>5||y2_peq<0)
                 {
                     paint(1);
-                    printf("\t\t    DIGITE UMA COORDENADA VÁLIDA!\n");
+                    printf("\t\t    TYPE A VALID COORDINATE!\n");
                     reset();
                 }
 
@@ -661,7 +661,7 @@ void start(){
 // CONFIGURATION FUNCTION:
 
 void config(){
-    setlocale(LC_ALL, "Portuguese");
+    setlocale(LC_ALL, "English");
     srand(time(0));
 
     // CONSOLE AREA
@@ -679,51 +679,53 @@ void config(){
 
 void rules(){
     paint(1);
-    printf("\n\tOpção Selecionada: Regras\n\n");
+    printf("\n\tSelected option: Rules\n\n");
     reset();
     paint(2);
     Sleep(500);
     printf("    =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=\n\n");
     Sleep(1000);
-    printf("\t\t     ____ ____ ____ ____ ____ ____ \n");
-    printf("\t\t     |__/ |___ | __ |__/ |__| [__  \n");
-    printf("\t\t     |  \\ |___ |__] |  \\ |  | ___]\n\n");
+    printf("\t\t     ____           __  ___\n");
+    printf("\t\t     |__/ |  | |   |__ [__  \n");
+    printf("\t\t     |  \\ |__| |__ |__ ___]\n\n");
     Sleep(1000);
-    printf("\tAs Casas estão disputando ferozmente pelo Trono. Resta você, \ndono de todos os segredos, manipular vassalos e nobres para chegar num \n");
-    printf("resultado que, apesar de não agradar a todos, trará paz. Entretanto, o \ntempo é escasso e algumas das suas preciosas informações tardam a che-\n");
-    printf("gar. Você precisará trabalhar com incertezas por um momento. E quando\nas informações chegarem, talvez seja tarde demais para reverter a situ-\n");
-    printf("ação. A guerra pode estar mais perto do que nunca e a única pessoa ca-\npaz de evitá-la é você.\n\n");
+    printf("\tThe houses are fighting for the throne. It is up to you, owner\n of all secrets, to manipulate the houses to reach an agreement that\n");
+    printf(" will bring peace. However, time is delicate and some informations are\n yet to arrive.\n");
+    printf(" You'll need to work with uncertainties. When they arrive, maybe it\n will be to late to change the situation.");
+    printf(" The war is closer than never\n and the only one able to avoid it is you.\n\n");
     Sleep(1000);
-    printf("     I) Visão Geral\n");
-    printf("\tVocê representa o Titereiro, figura enigmática e muito influen-\nte. Após quatro Fases (Preparação, Expansão, Corvo e Intriga) você ven-\n");
-    printf("cerá a partida se conseguir colocar cada Casa na pontuação definida no\ncomeço da partida. Evitando, assim, a guerra.\n\n");
+    printf("     I) General vision\n");
+    printf("\tYou are The Puppeteer, a mysterious and influent figure.\n After three phases (Preparation, Expantion, Intrigue) you'll win\n");
+    printf(" the game if you manage to place each house at the defined position,\n with the correct values. Thus avoiding the war.\n\n");
     Sleep(1000);
-    printf("     II) Preparação\n");
-    printf("\tEscolha o modo de jogo e a dificuldade, que é quem define a\nquantidade de peças que poderão ter sua pontuação revelada.\n\n");
+    printf("     II) Preparation\n");
+    printf("\tChoose the game mode and difficulty, wich define\n how many houses will have their value revealed.\n\n");
     Sleep(1000);
-    printf("     III) Fase de Expansão\n");
-    printf("\tNessa fase, você irá preencher o tabuleiro 11x11, por meio das\ncoordenadas, com as peças que forem entregues pelo sistema, de modo que\n");
-    printf("o tabuleiro fique preenchido no formato 6x6 ao final. Você deve inserir\nas peças em casas adjacentes às que já possuem alguma peça inserida.\n\n");
+    printf("     III) Expansion phase\n");
+    printf("\tAt this phase, place the pieces at the top of the stack\n in the 11x11 board, using the coordinates,");
+    printf(" so that at the end you'll\n have a colorful 6x6 board.\n You must place the pieces next to one another.\n\n");
     Sleep(1000);
-    printf("     IV) Fase do Corvo e da Intriga\n");
-    printf("\tApós o preenchimento do tabuleiro, as pontuações de todas as\npeças serão reveladas. Você terá a oportunidade de realizar seis intri-\n");
-    printf("gas, que significa manipular a posição das peças, para que o tabuleiro\nfique com a pontuação correta de cada peça, de acordo com os seguintes\n");
-    printf("modos:\n");
+    printf("     IV) Phase of Intrigue\n");
+    printf("\tAfter filling the board, the values of all the houses will be\n revealed. You'll be able to make 6 intrigues,");
+    printf(" wich means to\n manipulate the pieces, so that they'll have the correct value\n at the correct places, according to the game modes.\n\n");
+    printf(" modes:\n");
     printf("\t   [#][#][#][#][#][#]\t\t[ ][ ][ ][ ][ ][ ]\n");
     printf("\t   [#][ ][ ][ ][ ][#]\t\t[ ][#][#][#][#][ ]\n");
     printf("\t   [#][ ][ ][ ][ ][#]\t\t[ ][#][#][#][#][ ]\n");
     printf("\t   [#][ ][ ][ ][ ][#]\t\t[ ][#][#][#][#][ ]\n");
     printf("\t   [#][ ][ ][ ][ ][#]\t\t[ ][#][#][#][#][ ]\n");
     printf("\t   [#][#][#][#][#][#]\t\t[ ][ ][ ][ ][ ][ ]\n");
-    printf("\t Controle das Fronteiras       Concentração Central\n\n");
-    printf("\tVocê deve escolher duas fichas adjacentes para trocá-las de lu-\ngar. Em seguida deve trancar uma das duas peças selecionadas, e por úl-\ntimo trancar uma das cores que as duas peças possuem. Após trancar a\npeça no tabuleiro, esta não poderá mais ser mexida de forma alguma.\n");
-    printf("Após trancar a cor, você somente não poderá mais mexer em peças daquela\ncor se tentar mexer com outra peça na qual sua cor também está tranca-\nda.");
-    printf("\n\tO trancamento de uma peça é representado com os ':' nas late-\nrais da peça.\n\n");
+    printf("\t    Frontier Control\t\tCentral Concentration\n\n");
+    printf("\tYou must choose two adjacent pieces to swap places.\n Next, you must lock one of them in the board,\n");
+    printf(" Lastly, you must lock one of the colors of the pieces you swapped.\n After locking a piece in the board, it'll never be movable again.\n");
+    printf(" After locking a color, you wont be able to move pieces of\n that same color with pieces of another locked color.\n");
+    printf(" You can only swap two pieces if at least\n one of them has it's color unlocked.");
+    printf("\n\tA locked piece/color is represented by a ':#:'.\n\n");
     Sleep(1000);
-    printf("     V) Fim da Partida\n");
-    printf("\tApós realizar as seis intrigas (ou menos, caso consiga chegar à\nquantidade correta antes), você vence a partida se todas as peças esti-\n");
-    printf("verem com a pontuação correta dentro do tabuleiro 4x4, e assim consegue\nevitar a guerra e a paz irá reinar por mais algum tempo. Caso contrá-\n");
-    printf("rio, você falhou e muitas vidas serão perdidas.\n\n");
+    printf("     V) End of game\n");
+    printf("\tAfter making 6 intrigues (or less, if you won before that),\n you win the game if all the pieces have");
+    printf(" the correct value in the\n correct places, thus avoiding the war and bringing peace to the\n kingdom. Otherwise,");
+    printf(" you have failed and many will perish.\n\n");
     Sleep(500);
     printf("    =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=\n\n");
     reset();
@@ -733,37 +735,27 @@ void rules(){
 
 void credits(){
     paint(1);
-    printf("\n\tOpção Selecionada: Créditos\n\n");
+    printf("\n\tSelected option: Credits\n\n");
     reset();
     paint(2);
     Sleep(500);
     printf("    =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=\n\n");
     Sleep(1000);
-    printf("\t\t\t\t/\n");
-    printf("\t\t   ____ ____ ____ ___  . ___ ____ ____\n");
-    printf("\t\t   |    |__/ |___ |  \\ |  |  |  | [__  \n");
-    printf("\t\t   |___ |  \\ |___ |__/ |  |  |__| ___]\n\n");
+    printf("\t\t   ____ ____ ____ ___  . ___ ____\n");
+    printf("\t\t   |    |__/ |___ |  \\ |  | [__  \n");
+    printf("\t\t   |___ |  \\ |___ |__/ |  | ___]\n\n");
 
     Sleep(500);
-    printf("\t\t\t     Desenvolvedores:\n");
-    printf("\t     Antonio Nunes, Arthur Lôbo e Guido Xenofonte\n\n");
-    printf("\t\t\t  Sir. Caçador de bugs:\n");
-    printf("\t\t\t\tArthur Lôbo\n\n");
-    Sleep(500);
-    printf("\t\t    Barão da música e efeitos sonoros:\n");
-    printf("\t\t\t      Guido Xenofonte\n\n");
-    Sleep(500);
-    printf("\t\t\t Mestre-artesão do jogo:\n");
-    printf("\t\t\t      Antonio Nunes\n\n");
-    Sleep(500);
-    printf("\t\t\t   Idealizador do jogo:\n");
-    printf("\t\t\t     Roberto Pinheiro\n\n");
+    printf("\t\t\t     Devs:\n");
+    printf("\t     OArthr, AntonioNunessz & guidoxenofonte2005\n\n");
+    printf("\t\t\t   Game creator:\n");
+    printf("\t    Roberto Pinheiro at PinheiroBG\n\n");
     Sleep(500);
     printf("    =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=\n\n");
     reset();
 }
 
-// FUNCION TO SHOW THE WORD VITÓRIA:
+// FUNCION TO SHOW THE WORD VITÃ“RIA:
 
 void victory(){
     paint(2);
@@ -775,7 +767,8 @@ void victory(){
     printf("\t \\ \\ / / |_ _| |_   _|  / _ \\  | _ \\ |_ _|   /_\\   | |\n");
     printf("\t  \\ V /   | |    | |   | (_) | |   /  | |   / _ \\  |_|\n");
     printf("\t   \\_/   |___|   |_|    \\___/  |_|_\\ |___| /_/ \\_\\ (_)\n");
-   reset();
+    reset();
+    Sleep(5000);
 }
 
 //  FUNCION TO SHOW THE WORD DERROTA:
@@ -789,9 +782,10 @@ void defeat(){
     printf("\t | |) | | _|  |   / |   / | (_) |   | |    / _ \\  |_|\n");
     printf("\t |___/  |___| |_|_\\ |_|_\\  \\___/    |_|   /_/ \\_\\ (_)\n");
     reset();
+    Sleep(5000);
 }
 
-// FUNÇÕES OBRIGATÓRIAS:
+// FUNÃ‡Ã•ES OBRIGATÃ“RIAS:
 
 void embaralhar(int **bigarr, int *colorarr, int *casasarr, int valor_pulado)
 {
@@ -961,7 +955,7 @@ int exibeTabuleiro(int **tabuleiro, struct Casa **tabuleiroMini, int H, int h, i
         }
         break;
     default:
-        printf("ERRO");
+        printf("ERROR");
         break;
     }
 
@@ -979,19 +973,19 @@ int validaIntriga(struct Casa **matriz_pequena, bool *cortranc, int x1_peq, int 
     if (!((x1_peq == x2_peq && (y1_peq-y2_peq == 1 || y1_peq-y2_peq == -1)) || (y1_peq == y2_peq && (x1_peq-x2_peq == 1 || x1_peq-x2_peq == -1))))
     {
         paint(1);
-        printf("\tDIGITE CASAS ADJACENTES!\n");
+        printf("\tTYPE ADJACENT PIECES!\n");
         reset();
     }
     else if (!((matriz_pequena[x1_peq][y1_peq].trancada == 0 && matriz_pequena[x2_peq][y2_peq].trancada ==0)))
     {
         paint(1);
-        printf("\tAS DUAS CASAS PRECISAM ESTAR \n\tDESTRANCADAS PARA FAZER INTRIGA!\n");
+        printf("\tBOTH PIECES MUST BE UNLOCKED IN THE BOARD!\n");
         reset();
     }
     else if (!(((cortranc[matriz_pequena[x1_peq][y1_peq].cor] == 0) || (cortranc[matriz_pequena[x2_peq][y2_peq].cor] == 0))))
     {
         paint(1);
-        printf("\tPELO MENOS UMA COR PRECISA ESTAR \n\tDESTRANCADA PARA FAZER INTRIGA!\n");
+        printf("\tAT LEAST ONE OF THE COLORS MUST BE UNLOCKED!\n");
         reset();
     }
 
@@ -1004,7 +998,7 @@ int fazIntriga(struct Casa **casas6x6, bool *cortranc, int *casasarr, int x1_peq
     do
     {
         paint(1);
-        printf("\tDIGITE UMA PEÇA DO TABULEIRO PARA TRANCAR. (1 OU 2): ");
+        printf("\tType a piece from the board to lock. (1 or 2): ");
         reset();
 
         scanf(" %d", &n1);
@@ -1025,20 +1019,20 @@ int fazIntriga(struct Casa **casas6x6, bool *cortranc, int *casasarr, int x1_peq
     do
     {
         paint(1);
-        printf("\tDIGITE UMA COR PARA TRANCAR (0 a 6): ");
+        printf("\tType a color to lock (0 to 6): ");
         reset();
 
         scanf(" %d", &n2);
         if (cortranc[casasarr[n2]])
         {
             paint(1);
-            printf("\tTRANQUE UMA COR NOVA!\n");
+            printf("\tLOCK A NEW COLOR!\n");
             reset();
         }
         else if (casasarr[n2] != casas6x6[x1_peq][y1_peq].cor  &&  casasarr[n2] != casas6x6[x2_peq][y2_peq].cor)
         {
             paint(1);
-            printf("\tSOMENTE AS CORES DAS CASAS ENVOLVIDAS NA INTRIGA PODEM SER TRANCADAS!\n");
+            printf("\tONLY THE SWAPPED PIECES' COLORS CAN BE LOCKED!\n");
             reset();
         }
 
@@ -1127,7 +1121,7 @@ int pontosCorretos(struct Casa **casas6x6, int *casasarr, int modo, int valor_pu
     int venceu = 1;
 
     paint(1);
-    printf("\n\tCasas corretas: \n\t");
+    printf("\n\tCorrect houses: \n\t");
     paint(2);
 
     for (int i=0;i<7;i++)
@@ -1142,7 +1136,7 @@ int pontosCorretos(struct Casa **casas6x6, int *casasarr, int modo, int valor_pu
                     venceu = 0;
                     continue;
                 }
-                printf(" Vermelho |");
+                printf(" Red |");
                 continue;
             case 2:
                 if (g!=i)
@@ -1150,7 +1144,7 @@ int pontosCorretos(struct Casa **casas6x6, int *casasarr, int modo, int valor_pu
                     venceu = 0;
                     continue;
                 }
-                printf(" Verde |");
+                printf(" Green |");
                 continue;
             case 3:
                 if (ye!=i)
@@ -1158,7 +1152,7 @@ int pontosCorretos(struct Casa **casas6x6, int *casasarr, int modo, int valor_pu
                     venceu = 0;
                     continue;
                 }
-                printf(" Amarelo |");
+                printf(" Yellow |");
                 continue;
             case 4:
                 if (b!=i)
@@ -1166,7 +1160,7 @@ int pontosCorretos(struct Casa **casas6x6, int *casasarr, int modo, int valor_pu
                     venceu = 0;
                     continue;
                 }
-                printf(" Azul |");
+                printf(" Blue |");
                 continue;
             case 5:
                 if (p!=i)
@@ -1174,7 +1168,7 @@ int pontosCorretos(struct Casa **casas6x6, int *casasarr, int modo, int valor_pu
                     venceu = 0;
                     continue;
                 }
-                printf(" Roxo |");
+                printf(" Purple |");
                 continue;
             case 6:
                 if (c!=i)
@@ -1182,7 +1176,7 @@ int pontosCorretos(struct Casa **casas6x6, int *casasarr, int modo, int valor_pu
                     venceu = 0;
                     continue;
                 }
-                printf(" Ciano |");
+                printf(" Cyan |");
                 continue;
         }
         //printf("\t\t %d  %d  %d  %d  %d  %d\n\n\n", r,g,ye,b,p,c);
